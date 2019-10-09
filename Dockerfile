@@ -39,10 +39,11 @@ RUN apt-get update && apt-get install -qqy --no-install-recommends \
     procps \
     rsync \
     zip \
+    mc \
     openssh-client \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ARG NG_CLI_VERSION=8.2.2
+ARG NG_CLI_VERSION=8.2.3
 LABEL angular-cli=$NG_CLI_VERSION node=$NODE_VERSION
 
 # npm 5 uses different userid when installing packages, as workaround su to node when installing
